@@ -61,7 +61,7 @@
     .state-badge{display:grid;place-items:center;flex:0 0 42px;height:42px;border-radius:12px;background:var(--soft);color:var(--blue);font-size:13px;font-weight:800;letter-spacing:.2px}
     .state-name{min-width:0}
     .state-name strong{display:block;font-size:14px;line-height:1.35}
-    .state-name span{display:block;margin-top:3px;color:var(--muted);font-size:12px}
+    .state-name span{display:block;margin-top:3px;color:var(--muted);font-size:12px}.state-name .state-action{color:var(--blue);font-size:11px;font-weight:650}
     .state-note{margin-top:12px;color:var(--muted);font-size:12px}
     .tools{border:1px solid var(--line);border-radius:16px;background:var(--white);overflow:hidden}
     .tool-link{display:flex;align-items:center;gap:14px;padding:17px 20px}
@@ -78,7 +78,8 @@
     footer{padding:26px 0 34px;margin-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
     .footer-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     .footer-links{display:flex;gap:16px;flex-wrap:wrap}
-    @media(max-width:800px){.state-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}\n    @media(max-width:640px){.wrap{width:min(100% - 28px,1080px)}header{padding:15px 0}.top-link{font-size:12px}.hero{padding:34px 0 22px}h1{letter-spacing:-1.4px}.hero-copy{font-size:15px}.grid{grid-template-columns:1fr;gap:11px}.card{min-height:0;padding:18px}.about{padding:19px}.tool-link{padding:15px}.section-head{margin-bottom:12px}}
+    @media(max-width:800px){.state-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){.wrap{width:min(100% - 28px,1080px)}header{padding:14px 0}.brand{gap:8px;font-size:17px}.brand-mark{width:32px;height:32px;border-radius:9px;font-size:15px}.top-link{font-size:12px;white-space:nowrap}.hero{padding:30px 0 20px}h1{font-size:clamp(34px,9vw,44px);letter-spacing:-1.2px}.hero-copy{font-size:15px;margin:13px auto 20px}.primary{width:100%;max-width:360px;min-height:48px;padding:13px 16px}.microcopy{font-size:12px}section{padding:22px 0}.section-head{margin-bottom:12px}h2{font-size:21px}.section-sub{font-size:13px}.state-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.state-card{gap:9px;padding:11px 9px;border-radius:12px}.state-badge{flex-basis:34px;height:34px;border-radius:10px;font-size:12px}.state-name strong{font-size:13px;overflow-wrap:anywhere}.state-name span{font-size:11px;line-height:1.35}.state-name .state-action{display:none}.state-note{font-size:12px;line-height:1.5}.grid{grid-template-columns:1fr;gap:11px}.card{min-height:0;padding:17px;gap:12px}.icon{flex-basis:40px;height:40px;font-size:20px}.card h3{font-size:16px}.card p{font-size:13px}.about{padding:18px}.tool-link{padding:14px 13px;gap:10px}.tool-symbol{flex-basis:34px;height:34px}.tool-text strong{font-size:14px}.tool-text span{font-size:12px;line-height:1.45}.footer-row{gap:12px}.footer-links{gap:12px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
   </style>
 </head>
@@ -86,7 +87,7 @@
   <header>
     <div class="wrap" style="display:flex;align-items:center;gap:12px">
       <a class="brand" href="/" aria-label="Mock DMV Test home"><span class="brand-mark">M</span><span>Mock DMV Test</span></a>
-      <a class="top-link" href="https://dmv.openaa.com/guide">State DMV Guides ↗</a>
+      <a class="top-link" href="https://dmv.openaa.com/guide">State Guides ↗</a>
     </div>
   </header>
 
@@ -105,14 +106,14 @@
         <p class="section-sub" lang="zh-CN">选择你的考试州 · Select a state to find practice questions and study guides.</p>
       </div>
       <div class="state-grid">
-        <a class="state-card" href="https://dmv.openaa.com/new-york"><span class="state-badge">NY</span><span class="state-name"><strong>New York</strong><span>纽约州 · Practice & Guide</span></span></a>
-        <a class="state-card" href="https://dmv.openaa.com/california"><span class="state-badge">CA</span><span class="state-name"><strong>California</strong><span>加利福尼亚州 · Practice & Guide</span></span></a>
-        <a class="state-card" href="https://dmv.openaa.com/new-jersey"><span class="state-badge">NJ</span><span class="state-name"><strong>New Jersey</strong><span>新泽西州 · Practice & Guide</span></span></a>
-        <a class="state-card" href="https://dmv.openaa.com/pennsylvania"><span class="state-badge">PA</span><span class="state-name"><strong>Pennsylvania</strong><span>宾夕法尼亚州 · Practice & Guide</span></span></a>
-        <a class="state-card" href="https://dmv.openaa.com/massachusetts"><span class="state-badge">MA</span><span class="state-name"><strong>Massachusetts</strong><span>麻萨诸塞州 · Practice & Guide</span></span></a>
-        <a class="state-card" href="https://dmv.openaa.com/washington"><span class="state-badge">WA</span><span class="state-name"><strong>Washington</strong><span>华盛顿州 · Practice & Guide</span></span></a>
-        <a class="state-card" href="https://dmv.openaa.com/texas"><span class="state-badge">TX</span><span class="state-name"><strong>Texas</strong><span>德州 · Practice & Guide</span></span></a>
-        <a class="state-card" href="https://dmv.openaa.com/florida"><span class="state-badge">FL</span><span class="state-name"><strong>Florida</strong><span>佛罗里达州 · Practice & Guide</span></span></a>
+        <a class="state-card" href="https://dmv.openaa.com/new-york"><span class="state-badge">NY</span><span class="state-name"><strong>New York</strong><span>纽约州</span><span class="state-action">Practice &amp; Guide</span></span></a>
+        <a class="state-card" href="https://dmv.openaa.com/california"><span class="state-badge">CA</span><span class="state-name"><strong>California</strong><span>加利福尼亚州</span><span class="state-action">Practice &amp; Guide</span></span></a>
+        <a class="state-card" href="https://dmv.openaa.com/new-jersey"><span class="state-badge">NJ</span><span class="state-name"><strong>New Jersey</strong><span>新泽西州</span><span class="state-action">Practice &amp; Guide</span></span></a>
+        <a class="state-card" href="https://dmv.openaa.com/pennsylvania"><span class="state-badge">PA</span><span class="state-name"><strong>Pennsylvania</strong><span>宾夕法尼亚州</span><span class="state-action">Practice &amp; Guide</span></span></a>
+        <a class="state-card" href="https://dmv.openaa.com/massachusetts"><span class="state-badge">MA</span><span class="state-name"><strong>Massachusetts</strong><span>麻萨诸塞州</span><span class="state-action">Practice &amp; Guide</span></span></a>
+        <a class="state-card" href="https://dmv.openaa.com/washington"><span class="state-badge">WA</span><span class="state-name"><strong>Washington</strong><span>华盛顿州</span><span class="state-action">Practice &amp; Guide</span></span></a>
+        <a class="state-card" href="https://dmv.openaa.com/texas"><span class="state-badge">TX</span><span class="state-name"><strong>Texas</strong><span>德州</span><span class="state-action">Practice &amp; Guide</span></span></a>
+        <a class="state-card" href="https://dmv.openaa.com/florida"><span class="state-badge">FL</span><span class="state-name"><strong>Florida</strong><span>佛罗里达州</span><span class="state-action">Practice &amp; Guide</span></span></a>
       </div>
       <p class="state-note" lang="zh-CN">目前展示已上线的 8 个州。其他州的学习入口完善后再逐步添加。</p>
       <p class="state-note">Looking for another state? <a href="https://dmv.openaa.com/guide" style="color:var(--blue);font-weight:700">View all state guides →</a></p>
